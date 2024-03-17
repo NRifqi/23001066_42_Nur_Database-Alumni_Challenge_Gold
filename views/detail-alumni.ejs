@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <%- include("header") %>
+
+        <div class="container mt-5">
+        <h3 class="text-center">Data Lengkap Alumni</h3><br>
+            <table class="table">
+                <thead>
+                    <tr>                    
+                        <th scope="col">ID</th>
+                        <th scope="col">Nama</th>
+                        <th scope="col">NIS</th>
+                        <th scope="col">Alamat</th>
+                        <th scope="col">Tahun Lulus</th>
+                        <th scope="col">Pekerjaan</th>
+                        <th scope="col">Perusahaan / Lembaga</th>
+                        <th scope="col">Kesan</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><%= detailAlumni.id %></td>
+                        <td><%= detailAlumni.nama %></td>
+                        <td><%= detailAlumni.nis %></td>
+                        <td><%= detailAlumni.alamat %></td>
+                        <td><%= detailAlumni.angkatan %></td>
+                        <td><%= detailAlumni.pekerjaan %></td>
+                        <td><%= detailAlumni.perusahaan %></td>
+                        <td><%= detailAlumni.kesan %></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    <%- include("footer") %>
+
+</body>
+</html>

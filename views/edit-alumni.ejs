@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <%- include('header') %>
+        <div class="container mt-5"></div>
+            <h3 class="text-center">Sunting Data</h3>
+            <form action="/edit-alumni/<%= alumni.id %>" class="mx-auto" style="width: 330px" method="POST">
+                <div class="mb-3">
+                    <label for="nama" class="form-label">Nama</label>
+                    <input type="text" id="nama" name="nama" class="form-control" value="<%= alumni.nama%>">
+                </div>
+                <div class="mb-3">
+                    <label for="nis" class="form-label">NIS</label>
+                    <input type="number" name="nis" class="form-control" value="<%= alumni.nis%>">
+                </div>
+                <div class="mb-3">
+                    <label for="alamat" class="form-label">Alamat</label>
+                    <input type="text" name="alamat" class="form-control" value="<%= alumni.alamat%>">
+                </div>
+                <div class="mb-3">
+                    <label for="angkatan" class="form-label">Tahun Lulus</label>
+                    <input type="number" name="angkatan" class="form-control" value="<%= alumni.angkatan%>">
+                </div>
+                <div class="mb-3">
+                    <label for="pekerjaan" class="form-label">Pekerjaan</label>
+                    <input type="text" name="pekerjaan" class="form-control" value="<%= alumni.pekerjaan%>">
+                </div> 
+                <div class="mb-3">
+                    <label for="perusahaan" class="form-label">Perusahaan / Lembaga</label>
+                    <input type="text" name="perusahaan" class="form-control" value="<%= alumni.perusahaan%>">
+                </div>
+                <div class="mb-3">
+                    <label for="kesan" class="form-label">Kesan</label>
+                    <input type="text" name="kesan" class="form-control" value="<%= alumni.kesan%>">
+                <div><br> 
+                <button type="submit">Simpan</button>
+            </form>
+        </div>
+    <%- include('footer') %>
+
+</body>
+</html>
